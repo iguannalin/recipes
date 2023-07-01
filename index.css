@@ -41,6 +41,8 @@ input {
 
 .container {
   width: 90%;
+  box-sizing: border-box;
+  padding: 0 5%;
 }
 
 .content, .listContainer {
@@ -72,6 +74,8 @@ ol {
   padding: 0 8px;
   margin: 4px;
   width: 85%;
+  box-sizing: border-box;
+  padding: 0 5%;
 }
 
 li {
