@@ -40,7 +40,7 @@ input {
 }
 
 .container {
-  width: 100%;
+  width: 90%;
 }
 
 .content, .listContainer {
@@ -68,10 +68,10 @@ ol {
   justify-content: center;
   align-items: flex-start;
   flex-flow: column wrap;
-  width: 100%;
   list-style: none;
   padding: 0 8px;
   margin: 4px;
+  width: 85%;
 }
 
 li {
@@ -79,7 +79,6 @@ li {
   font-size: 32px;
   margin-left: 32px;
   white-space: normal;
-  width: 75%;
   word-break: break-all;
 }
 
