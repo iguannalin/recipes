@@ -43,6 +43,33 @@ input {
   text-shadow: #858ebc -2px 2px 8px;
 }
 
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
 #result {
   font-size: 64px;
+}
+
+ol {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column wrap;
+  width: 100%;
+}
+
+li {
+  padding: 22px 0 4px;
+  font-size: 32px;
+}
+
+span {
+  font-size: 20px;
+  font-style: italic;
+  margin-left: -32px;
 }
