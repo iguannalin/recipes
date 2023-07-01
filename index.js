@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
   let searchResults = {};
 
   const getRandomEmoji = () => emojis[getRandomInt(0, emojis.length)];
+  const getOrdinal = (i) => i == 0 ? "first" : i == 1 ? "second" : i == 2 ? "third" : i == 3 ? "fourth" : i == 4 ? "fifth" : i == 5 ? "sixth" : '';
 
   function fakeType(parent) {
     const max = getRandomInt(2,10);
@@ -45,20 +46,22 @@ window.addEventListener("load", () => {
           }
         default:
           setTimeout(() => {
-            parent.innerText += getRandomEmoji();
+            parent.innerHTML += getRandomEmoji();
           }, i*speed);
           break;
       }
     }
     setTimeout(() => {
-      parent.innerText += '.';
+      parent.innerHTML += '.';
     }, max*speed);
   }
 
   let input;
+  let starter = document.getElementById('starter');
 
   function setText(limit) {
     box.innerText = "";
+    starter.innerHTML = "";
     if (!searchResults[0]) return;
     for (let i = 0; i < limit; i++) {
       if (!searchResults[i]) return;
@@ -66,14 +69,15 @@ window.addEventListener("load", () => {
     }
     list.innerHTML = "";
     if (limit < 1) return;
-    const header = document.createElement('span');
-    header.innerText = `how to make ${box.innerText} :`;
-    list.appendChild(header);
+    starter.innerHTML = `to make ${box.innerText} —  `;
     let max = getRandomInt(1,3);
     for (let j = 0; j < max; j++) {
       setTimeout(() => {
         const item = document.createElement('li');
+        const small = document.createElement('span');
         fakeType(item);
+        small.innerHTML += `${getOrdinal(j)}, `;
+        item.appendChild(small);
         list.appendChild(item);
       }, (j+1)*100);
     }

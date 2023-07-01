@@ -21,10 +21,6 @@ body {
   font-size: 16px;
 }
 
-.container {
-  margin-top: 10%;
-}
-
 input {
   box-shadow: 0px 2px 4px 2px #858ebc;
   border: 0;
@@ -39,11 +35,15 @@ input {
   align-items: center;
   justify-content: center;
   display: flex;
-  margin-bottom: 50px;
+  margin-top: 150px;
   text-shadow: #858ebc -2px 2px 8px;
 }
 
-.content {
+.container {
+  width: 100%;
+}
+
+.content, .listContainer {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -52,7 +52,15 @@ input {
 }
 
 #result {
+  text-align: center;
   font-size: 64px;
+}
+
+#starter {
+  font-size: 24px;
+  text-align: left;
+  margin: 0px 0;
+  font-style: italic;
 }
 
 ol {
@@ -61,11 +69,24 @@ ol {
   align-items: flex-start;
   flex-flow: column wrap;
   width: 100%;
+  list-style: none;
+  padding: 0 8px;
+  margin: 4px;
 }
 
 li {
-  padding: 22px 0 4px;
+  padding: 12px 0 4px;
   font-size: 32px;
+  margin-left: 32px;
+  white-space: normal;
+  width: 75%;
+  word-break: break-all;
+}
+
+li span {
+  font-size: 12px;
+  font-size: 20px;
+  padding-right: 16px;
 }
 
 span {
